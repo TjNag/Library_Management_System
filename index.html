@@ -1,45 +1,225 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library Management System</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.1/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <script src="./script.js"></script>
   </head>
-  <body style="background-color: PowderBlue;">
-    <img src="./image/jisulogo.png" height="90">
-    <img src="./image/first.png" hspace="400" height="200" alt="Man working on a laptop" class="center">
-    <h1 style="text-align:center; margin-bottom: 7px;">LIBRARY MANAGEMENT SYSTEM</h1>
-    <h2 style="text-align:center; margin-top: 6px;">Effective library management system to manage all library records efficiently and organically, we overcome this trouble digitally</h2>
-    <hr>
-    <p style="font-size: 1.5em;">A Library Management System is a software that maintains all the records of the Library. It contains works like issuing or returning or add more books or finding the number of available books in the library or late fine charge record, etc.</p>
-    <p style="font-size: 1.5em;">This system allows the librarian to maintain the library resources in a more operative manner that will help to save their time.</p>
-    <p style="font-size: 1.5em;">Library Management System is also useful for students as well as a librarian to keep the constant track of the availability of all books in the library.</p>
-    <img src="./image/second.png" hspace="500" height="300"/>
-    <p style="font-size: 1.5em;"><b>Importance of Library Management System :</b></p>
-    <ul>
-      <li style="font-size: 1.5em; margin-bottom: 10px;">A Library Management System is the most proficient system which is very easy to use for managing all the processes involved in a Library in the most effective ways.</li>
-      <li style="font-size: 1.5em; margin-bottom: 10px;">This system will reduce all the manual work and the whole process can be managed just through single clicks and edits.</li>
-      <li style="font-size: 1.5em; margin-bottom: 10px;">There will be no issues while storing the data securely and searching the records of any individual afterward.</li>
-      <li style="font-size: 1.5em; margin-bottom: 10px;">Any student can rent a book just by signing in with their details, and return it with the date of returning.</li>
-      <li style="font-size: 1.5em; margin-bottom: 10px;">The staff can also facilitate themselves with some extra authorizations and privileges.</li>
-    </ul>
-    <img src="./image/third.png" hspace="500" height="250"/>
-    <p style="font-size: 1.5em;"><b>Advantages of Library Management System :</b></p>
-    <ol>
-      <li style="font-size: 1.5em; margin-bottom: 10px;">It reduces the manual paperwork and gives proper information of books as recorded automatically.</li>
-      <li style="font-size: 1.5em; margin-bottom: 10px;">Librarian can update the information of books and manage availability and arriver record of the books.</li>
-      <li style="font-size: 1.5em; margin-bottom: 10px;">It saves human efforts and time.</li>
-      <li style="font-size: 1.5em; margin-bottom: 10px;">With the help of library management software, anyone can easily search and find the books.</li>
-    </ol>
-	<p style="font-size: 1.5em;"><b>Click here to download the file -></b><a href = "Library Management System.exe">Library Management System</a><b><-</b></p>
-    <p style="font-size: 1.5em;"><b>Group Members :-</b></p>
-	<ul>
-	  <img src="./image/tj.png" height="100">
-      <li style="font-size: 1.5em; margin-bottom: 10px;">Tirthajyoti Nag</li>
-	  <img src="./image/jayu.png" height="100">
-      <li style="font-size: 1.5em; margin-bottom: 10px;">Jayasree Ghosh</li>
-	  <img src="./image/manona.png" height="100">
-      <li style="font-size: 1.5em; margin-bottom: 10px;">Manona Mukherjee</li>
-    <img src="./image/sayani.png" height="100">
-      <li style="font-size: 1.5em; margin-bottom: 10px;">Sayani Ghatak</li>
-    </ul>
+  <body class="bg-powder-blue font-sans" style="scroll-behavior: smooth;">
+    <nav class="sticky top-0 z-50 glassmorphism">
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+          <div
+            class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+          >
+            <div class="flex flex-shrink-0 items-center">
+              <img
+                class="h-8 w-auto"
+                src="./image/jisulogo.png"
+                alt="JIS University Logo"
+              />
+            </div>
+            <div class="hidden sm:ml-6 sm:block">
+              <div class="flex space-x-4">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a
+                  href="#dashboard"
+                  class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                  aria-current="page"
+                  >Dashboard</a
+                >
+                <a
+                  href="#team"
+                  class="text-black-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  >Team</a
+                >
+                <a
+                  href="#desc"
+                  class="text-black-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  >Description</a
+                >
+                
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+          >
+          <p class="text-lg mb-2 font-bold">
+            Click here to download
+            <a
+                  href="./Library Management System.exe" download 
+                  class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                  aria-current="page"
+                  >Download</a
+                >
+          </p>
+          </div>
+        </div>
+      </div>
+      
+    </nav>
+    <!-- Header -->
+    <header class="text-center p-4" id="dashboard">
+      <img src="./image/jisulogo.png" class="h-24 mx-auto" />
+      <h1 class="text-4xl font-bold my-2">LIBRARY MANAGEMENT SYSTEM</h1>
+      <h2 class="text-2xl my-2">Effective library management system...</h2>
+    </header>
+
+    <!-- Main Content -->
+    <main class="p-4">
+      
+      <!-- Description -->
+      <section class="p-20" id="desc">
+        <p style="font-size: 1.5em" class="pb-5">
+          A Library Management System is a software that maintains all the
+          records of the Library. It contains works like issuing or returning or
+          add more books or finding the number of available books in the library
+          or late fine charge record, etc.
+        </p>
+        <p style="font-size: 1.5em">
+          This system allows the librarian to maintain the library resources in
+          a more operative manner that will help to save their time.
+        </p>
+        <p style="font-size: 1.5em">
+          Library Management System is also useful for students as well as a
+          librarian to keep the constant track of the availability of all books
+          in the library.
+        </p>
+        <!-- More paragraphs -->
+      </section>
+
+      <section class="text-center">
+        <p class="text-lg mb-2">
+          Click here to download the file
+          <a href="Library Management System.exe" class="inline-block">
+            <button class="button-64" role="button">
+              <span class="text">Download: </span>
+              <img src="./image/download-folder.svg" alt="" class="w-10 h-10" />
+            </button>
+          </a>
+        </p>
+      </section>
+      
+
+      <!-- Importance and Advantages List -->
+      <section>
+        <div class="flex flex-col md:flex-row p-20">
+          <div class="md:w-1/2">
+            <h1 class="text-3xl font-bold mb-2">
+              Importance of Library Management System:
+            </h1>
+            <ul class="list-disc list-inside mb-4 text-xl">
+              <li class="mb-2.5">
+                A Library Management System is the most proficient system...
+              </li>
+              <li class="mb-2.5">
+                This system will reduce all the manual work...
+              </li>
+              <li class="mb-2.5">
+                There will be no issues while storing the data securely...
+              </li>
+              <li class="mb-2.5">
+                Any student can rent a book just by signing in...
+              </li>
+              <li class="mb-2.5">
+                The staff can also facilitate themselves...
+              </li>
+            </ul>
+          </div>
+          <div class="md:w-1/2 flex justify-center items-center">
+            <img
+              src="./image/second.png"
+              alt="Descriptive Alt Text"
+              class="w-64 h-64 md:w-64 md:h-64 object-cover object-center rounded-xl"
+            />
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row-reverse p-20">
+          <div class="md:w-1/2">
+            <h2 class="text-3xl font-bold mb-2">
+              Advantages of Library Management System:
+            </h2>
+            <ol class="list-decimal list-inside text-xl">
+              <li class="mb-2.5">
+                It reduces the manual paperwork and gives proper information...
+              </li>
+              <li class="mb-2.5">
+                Librarian can update the information of books...
+              </li>
+              <li class="mb-2.5">It saves human efforts and time.</li>
+              <li class="mb-2.5">
+                With the help of library management software...
+              </li>
+            </ol>
+          </div>
+          <div class="md:w-1/2 flex justify-center items-center">
+            <img
+              src="./image/third.png"
+              alt="Descriptive Alt Text"
+              class="w-96 h-64 md:w-96 md:h-64 object-cover object-center rounded-xl"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="text-center pb-20">
+        <p class="text-lg mb-2">
+          Click here to download the file
+          <a href="Library Management System.exe" class="inline-block">
+            <button class="button-64" role="button">
+              <span class="text">Download: </span>
+              <img src="./image/download-folder.svg" alt="" class="w-10 h-10" />
+            </button>
+          </a>
+        </p>
+      </section>
+
+      <!-- Group Members -->
+      <section class="text-center mb-16" id="team">
+        <h2 class="text-center text-4xl font-bold mb-16">Team Members</h2>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./image/tj.png" class="object-cover w-full h-full" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./image/jayu.png" class="object-cover w-full h-full" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./image/manona.png"
+                class="object-cover w-full h-full"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./image/sayani.png"
+                class="object-cover w-full h-full"
+              />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
